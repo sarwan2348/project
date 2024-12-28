@@ -1,0 +1,135 @@
+/* General Reset and Variables */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --primary: #8f00ff;
+  }
+  
+  html, body {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    overflow-x: hidden;
+  }
+  
+  /* Background Section */
+  .background {
+    background-image: url("./image/cover.jpg");
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+    place-items: center;
+  }
+  
+  /* Box Styling */
+  .box {
+    background: rgba(240, 240, 240, 0.68);
+    border: solid 1px #fccdec;
+    border-radius: 20px;
+    box-shadow: 0px 19px 41px rgba(0, 0, 0, 0.36);
+    height: 320px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 50px;
+    text-align: center;
+  }
+  
+  .box h1 {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+    color: var(--primary);
+  }
+  
+  /* Input Form */
+  #takeNameForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  #Name {
+    background: transparent;
+    border: 1px solid #000000;
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.36);
+  }
+  
+  #Name:focus-visible {
+    outline: 1px solid var(--primary);
+    border: 1px solid var(--primary);
+  }
+  
+  #submitButton {
+    height: 48px;
+    width: 100px;
+    background: black;
+    border-radius: 13px;
+    border: 2px solid white;
+    color: whitesmoke;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  #submitButton:hover {
+    background: var(--primary);
+    color: white;
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 786px) {
+    .box {
+      width: 90%;
+      height: auto;
+      padding: 20px;
+    }
+  
+    .box h1 {
+      font-size: 24px;
+      line-height: 36px;
+    }
+  
+    #Name {
+      padding: 10px 15px;
+      font-size: 16px;
+    }
+  
+    #submitButton {
+      font-size: 18px;
+      height: 40px;
+      width: 80px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .box {
+      padding: 15px;
+      gap: 15px;
+    }
+  
+    .box h1 {
+      font-size: 20px;
+    }
+  
+    #Name {
+      font-size: 14px;
+    }
+  
+    #submitButton {
+      font-size: 16px;
+      height: 35px;
+      width:70px;
+  }
+  }
+  
